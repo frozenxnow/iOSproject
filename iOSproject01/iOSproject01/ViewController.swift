@@ -41,8 +41,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        print(#function)
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        self.updateTimeLabelText(time: TimeInterval(sender.value))
+        if sender.isTracking { return }
+        self.player.currentTime = TimeInterval(sender.value)
+        
+        
     }
     
     func initializePlayer() {
@@ -76,7 +80,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func makeAndFireTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] (timer: Timer) in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] (timer: Timer) in
             if self!.progressSlider.isTracking { return }
             
             self!.updateTimeLabelText(time: self!.player.currentTime)
