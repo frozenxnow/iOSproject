@@ -20,12 +20,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.initializePlayer()
     }
     
     
     @IBAction func touchUpPlayPauseButton(_ sender: UIButton) {
-        print("button")
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            self.player?.play()
+        } else {
+            self.player?.pause()
+        }
+        
+        if sender.isSelected {
+            self.makeAndFireTimer()
+        } else {
+            self.invalidateTimer()
+        }
     }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
@@ -54,22 +67,27 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     func updateTimeLabelText (time: TimeInterval) {
         let minute = Int(time / 60)
-        let second = time.truncatingRemainder(dividingBy: 60)
+        let second = Int(time.truncatingRemainder(dividingBy: 60))
         let milisecond = Int(time.truncatingRemainder(dividingBy: 1) * 100)
         
-        let timeText = "\(minute):\(second):\(milisecond)"
+        let timeText = String(format: "%02ld:%02ld:%02ld", minute, second, milisecond)
         
         self.timeLabel.text = timeText
     }
     
     func makeAndFireTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] (timer: Timer) in
-            if ((self?.progressSlider.isTracking) != nil) { return }
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] (timer: Timer) in
+            if self!.progressSlider.isTracking { return }
             
-            self?.updateTimeLabelText(time: self?.player.currentTime ?? "")
-            self?.progressSlider.value = Float(self?.player.currentTime)
+            self!.updateTimeLabelText(time: self!.player.currentTime)
+            self!.progressSlider.value = Float(self!.player.currentTime)
         })
         self.timer.fire()
+    }
+    
+    func invalidateTimer() {
+        self.timer.invalidate()
+        self.timer = nil
     }
     
 }
