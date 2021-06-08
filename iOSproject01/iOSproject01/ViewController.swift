@@ -94,5 +94,38 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         self.timer = nil
     }
     
+    
+    // 오디오 재생하는 도중 디코드 오류가 발생할 경우 호출되는 메서드
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        guard let error: Error = error else {
+            print("오디오 플레이어 디코드 오류 발생")
+            return
+        }
+        
+        let msg: String
+        msg = "오디오 플레이어 오류 발생 \(error.localizedDescription)"
+        
+        let alert: UIAlertController = UIAlertController(title: "알림", message: msg, preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction: UIAlertAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { (action: UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    // 음악이 끝난 후 버튼을 다시 재생버튼으로 변경하는 방법!
+
+    // 재생 종료 후 호출되는 메서드 : 여기에서 버튼을 바꿔주고(selected말고), value값 변경, 시간 text 변경, timer종료
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        self.playPauseButton.isSelected = false
+        self.progressSlider.value = 0
+        self.updateTimeLabelText(time: 0)
+        self.invalidateTimer()
+    }
+    
 }
 
