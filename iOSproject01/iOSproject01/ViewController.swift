@@ -21,7 +21,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.addViewWithCode() // init 전에 호출해야한다 
+        self.addViewWithCode() // init 전에 호출해야한다
         self.initializePlayer()
     }
     
@@ -104,6 +104,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func addPlayPauseButton() {
+        
         let button: UIButton = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -124,7 +125,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         width = button.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5)
         
         let ratio: NSLayoutConstraint
-        ratio = button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 1.0)
+        ratio = button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 1)
         
         centerX.isActive = true
         centerY.isActive = true
@@ -132,17 +133,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         ratio.isActive = true
         
         self.playPauseButton = button
-        
     }
     
     func addTimeLabel() {
         let timeLabel: UILabel = UILabel()
-        timeLabel.translatesAutoresizingMaskIntoConstraints = true
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(timeLabel)
         
         timeLabel.textColor = UIColor.black
-        timeLabel.textAlignment = .center
+        timeLabel.textAlignment = NSTextAlignment.center
         timeLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         
         let centerX: NSLayoutConstraint
@@ -160,9 +160,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     func addProgressSlider() {
         let slider: UISlider = UISlider()
-        slider.translatesAutoresizingMaskIntoConstraints = true
+        slider.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(slider)
+        
+        slider.minimumTrackTintColor = UIColor.red
         
         slider.addTarget(self, action: #selector(self.sliderValueChanged(_:)), for: .valueChanged)
         
@@ -187,6 +189,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.progressSlider = slider
     }
+    
     
     
     
