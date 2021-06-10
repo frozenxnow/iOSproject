@@ -7,15 +7,15 @@
 
 import UIKit
 
-class SecondViewController: UITabBarController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
+
     @IBAction func popViewPrev() {
         self.navigationController?.popViewController(animated: true)
     }
-
 }
