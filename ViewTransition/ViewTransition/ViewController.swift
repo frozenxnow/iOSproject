@@ -8,7 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var ageField: UITextField!
 
+    @IBAction func touchUpSetButton(_ sender: UIButton) {
+        UserInformation.shared.name = nameField.text
+        UserInformation.shared.age = ageField.text
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +24,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         print("VC의 view가 화면에 보여질 예정")
     }
     

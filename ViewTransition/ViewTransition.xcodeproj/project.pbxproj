@@ -14,6 +14,7 @@
 		F2065CE62672534900964E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2065CE52672534900964E79 /* Assets.xcassets */; };
 		F2065CE92672534900964E79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2065CE72672534900964E79 /* LaunchScreen.storyboard */; };
 		F2065CF6267258CA00964E79 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2065CF5267258CA00964E79 /* SecondViewController.swift */; };
+		F2065D1A2673480300964E79 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2065D192673480300964E79 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F2065CE82672534900964E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2065CEA2672534900964E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2065CF5267258CA00964E79 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F2065D192673480300964E79 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F2065CDE2672534600964E79 /* SceneDelegate.swift */,
 				F2065CE02672534600964E79 /* ViewController.swift */,
 				F2065CE22672534600964E79 /* Main.storyboard */,
+				F2065D192673480300964E79 /* UserInformation.swift */,
 				F2065CE52672534900964E79 /* Assets.xcassets */,
 				F2065CE72672534900964E79 /* LaunchScreen.storyboard */,
 				F2065CEA2672534900964E79 /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2065D1A2673480300964E79 /* UserInformation.swift in Sources */,
 				F2065CF6267258CA00964E79 /* SecondViewController.swift in Sources */,
 				F2065CE12672534600964E79 /* ViewController.swift in Sources */,
 				F2065CDD2672534600964E79 /* AppDelegate.swift in Sources */,

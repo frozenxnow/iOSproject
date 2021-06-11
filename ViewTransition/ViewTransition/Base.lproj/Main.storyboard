@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZq-P7-R8L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KlP-LZ-wTu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -23,15 +23,46 @@
                                     <segue destination="WIP-U3-7Ht" kind="show" id="0Hs-0f-dqt"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-ho-Kke">
+                                <rect key="frame" x="20" y="148" width="374" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyT-wk-QCr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ㅁㅕ짤~?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-fk-1Aa">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItO-cF-rnW">
+                                <rect key="frame" x="20" y="108" width="206" height="30"/>
+                                <state key="normal" title="Set data to Singleton Instance"/>
+                                <connections>
+                                    <action selector="touchUpSetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qt-Rf-J5o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Fau-ho-Kke" firstAttribute="top" secondItem="ItO-cF-rnW" secondAttribute="bottom" constant="10" id="2EQ-6R-Glf"/>
                             <constraint firstItem="8jl-Kq-uTD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9cO-er-bsk"/>
+                            <constraint firstItem="ItO-cF-rnW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Obs-Yp-jb2"/>
                             <constraint firstItem="8jl-Kq-uTD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PRK-Ox-toY"/>
+                            <constraint firstItem="Fau-ho-Kke" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aEw-mp-PZu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fau-ho-Kke" secondAttribute="trailing" constant="20" id="aSy-oy-PDd"/>
+                            <constraint firstItem="ItO-cF-rnW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qMu-Yc-VS1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZOc-OH-MHj"/>
+                    <connections>
+                        <outlet property="ageField" destination="gLn-fk-1Aa" id="mMm-fl-G9X"/>
+                        <outlet property="nameField" destination="SyT-wk-QCr" id="Gai-01-Qev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,6 +133,20 @@
                                     <action selector="popViewPrev" destination="WIP-U3-7Ht" eventType="touchUpInside" id="D9w-0g-iYg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-Mu-J6M">
+                                <rect key="frame" x="20" y="135" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DM-Vv-i96">
+                                <rect key="frame" x="20" y="164" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1NY-OV-n00"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -111,6 +156,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jgN-UD-c34"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="8DM-Vv-i96" id="ccV-2h-QhN"/>
+                        <outlet property="nameLabel" destination="mdO-Mu-J6M" id="hg0-xd-hAr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kb9-lo-hAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
