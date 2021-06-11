@@ -23,7 +23,7 @@
                                 <rect key="frame" x="20" y="802" width="374" height="30"/>
                                 <state key="normal" title="사진 선택하기"/>
                                 <connections>
-                                    <action selector="touchUpSelectImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Nt-B6-3sV"/>
+                                    <action selector="touchUpSelectImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jX5-GG-qFs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,7 +40,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="lWg-44-quL" id="5lW-Ko-mKm"/>
+                        <outlet property="imageView" destination="lWg-44-quL" id="nG7-05-m1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
