@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="97" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="27h-tm-mmc">
             <objects>
-                <viewController id="rjh-Bm-8xW" sceneMemberID="viewController">
+                <viewController id="rjh-Bm-8xW" customClass="secondViewController" customModule="iOSproject02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AU9-Pd-Gry">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngm-Fs-W3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140.5797101449277" y="103.79464285714285"/>
+            <point key="canvasLocation" x="857" y="104"/>
         </scene>
     </scenes>
     <resources>
