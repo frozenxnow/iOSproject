@@ -9,18 +9,20 @@ import UIKit
 
 class secondViewController: UIViewController {
     
+    @IBOutlet weak var cancelButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var submitButtonWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var buttonStack: UIStackView!
-    
+    @IBOutlet weak var textView: UITextView!
     
     
     override func viewDidLoad() {
+        
+        cancelButtonWidth.constant = self.view.frame.size.width / 2
+        submitButtonWidth.constant = submitButtonWidth.constant
+        
+
         super.viewDidLoad()
         
-        
-       
     }
     
 }
