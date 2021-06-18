@@ -48,7 +48,8 @@
                                         <rect key="frame" x="87" y="0.0" width="54" height="30"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <segue destination="rjh-Bm-8xW" kind="presentation" id="TXB-DT-Ync"/>
+                                            <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvO-mD-UC3"/>
+                                            <segue destination="rjh-Bm-8xW" kind="presentation" id="KdZ-U8-9ez"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -122,6 +123,9 @@
                                             <constraint firstAttribute="width" constant="30" id="fIW-km-3pM"/>
                                         </constraints>
                                         <state key="normal" title="취소"/>
+                                        <connections>
+                                            <action selector="touchUpInsideCancelButton:" destination="rjh-Bm-8xW" eventType="touchUpInside" id="dcZ-YW-Ztu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-ia-i00">
                                         <rect key="frame" x="87" y="0.0" width="30" height="30"/>
@@ -163,15 +167,14 @@
                             <constraint firstItem="lHL-dt-MPL" firstAttribute="leading" secondItem="z7b-fV-ZTw" secondAttribute="leading" constant="10" id="wwl-dy-z46"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DHO-2d-cbb"/>
                     <connections>
-                        <outlet property="cancelButton" destination="eve-AA-FaW" id="lkP-Ey-CNT"/>
                         <outlet property="cancelButtonWidth" destination="fIW-km-3pM" id="Wlk-sg-0PG"/>
                         <outlet property="chekLabel" destination="ySJ-al-brX" id="boM-4e-Cp6"/>
                         <outlet property="idLabel" destination="QOD-bb-lzR" id="QuW-2l-lWA"/>
                         <outlet property="imageView" destination="AR3-5D-SF5" id="66b-PP-lmo"/>
                         <outlet property="passwordLabel" destination="BS4-s1-f3O" id="RW6-ZY-ogV"/>
                         <outlet property="submitButtonWidth" destination="v3W-zV-eMg" id="KIK-uu-YVs"/>
-                        <outlet property="textView" destination="hhP-gR-hyR" id="UJG-Rz-qu2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngm-Fs-W3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,6 +227,9 @@
                                             <constraint firstAttribute="width" constant="50" id="s3i-UV-cB3"/>
                                         </constraints>
                                         <state key="normal" title="취소"/>
+                                        <connections>
+                                            <action selector="touchUpInsideCancelButton:" destination="wK1-2v-6z2" eventType="touchUpInside" id="Vjj-8p-36A"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIV-fN-lz1">
                                         <rect key="frame" x="162" y="0.0" width="50" height="30"/>
@@ -231,6 +237,9 @@
                                             <constraint firstAttribute="width" constant="50" id="KXs-K9-Z39"/>
                                         </constraints>
                                         <state key="normal" title="이전"/>
+                                        <connections>
+                                            <action selector="touchUpInsidePrevButton:" destination="wK1-2v-6z2" eventType="touchUpInside" id="09c-Id-d6u"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXS-dz-3Eb">
                                         <rect key="frame" x="324" y="0.0" width="50" height="30"/>
@@ -265,6 +274,7 @@
                     <connections>
                         <outlet property="btn1Width" destination="s3i-UV-cB3" id="yjy-QV-jz2"/>
                         <outlet property="btn2Width" destination="KXs-K9-Z39" id="yE5-W9-nrj"/>
+                        <outlet property="btn3Width" destination="qkT-IS-bEp" id="lxT-6e-3eZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ya-FX-R2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

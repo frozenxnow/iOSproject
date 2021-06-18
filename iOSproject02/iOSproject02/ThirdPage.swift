@@ -13,6 +13,15 @@ class thirdViewController: UIViewController {
     @IBOutlet weak var btn2Width: NSLayoutConstraint!
     @IBOutlet weak var btn3Width: NSLayoutConstraint!
     
+    
+    @IBAction func touchUpInsideCancelButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func touchUpInsidePrevButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         
         btn1Width.constant = self.view.frame.size.width / 3
