@@ -12,6 +12,14 @@ class secondViewController: UIViewController {
     @IBOutlet weak var cancelButtonWidth: NSLayoutConstraint!
     @IBOutlet weak var submitButtonWidth: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var idLabel: UITextField!
+    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var chekLabel: UITextField!
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    
     @IBOutlet weak var textView: UITextView!
     
     
