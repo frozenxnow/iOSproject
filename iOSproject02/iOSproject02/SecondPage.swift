@@ -21,13 +21,6 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         pickImage()
     }
     @IBOutlet weak var nextButton: UIButton!
-    @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
-        
-        if idLabel.text?.count != 0 && passwordLabel.text?.count != 0 && passwordLabel.text == checkLabel.text {
-            nextButton.isEnabled = true
-        }
-        
-    }
     
     let imagePicker = UIImagePickerController()
     func pickImage() {
@@ -67,4 +60,15 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
 }
+
+extension secondViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let id = idLabel.text
+        let password = passwordLabel.text
+        let check = checkLabel.text
+        
+        return true
+    }
+}
+
 

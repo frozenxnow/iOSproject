@@ -160,7 +160,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                                 <state key="normal" title="다음"/>
                                                 <connections>
-                                                    <action selector="touchUpInsideNextButton:" destination="rjh-Bm-8xW" eventType="touchUpInside" id="FXp-sQ-aKT"/>
                                                     <segue destination="wK1-2v-6z2" kind="showDetail" id="Ees-dg-0Wl"/>
                                                 </connections>
                                             </button>
