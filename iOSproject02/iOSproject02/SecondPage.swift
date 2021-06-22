@@ -20,6 +20,14 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func touchUpInsidePickerButton(_ sender: Any) {
         pickImage()
     }
+    @IBOutlet weak var nextButton: UIButton!
+    @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
+        
+        if idLabel.text?.count != 0 && passwordLabel.text?.count != 0 && passwordLabel.text == checkLabel.text {
+            nextButton.isEnabled = true
+        }
+        
+    }
     
     let imagePicker = UIImagePickerController()
     func pickImage() {
@@ -40,6 +48,9 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imagePicker.sourceType = .photoLibrary
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
+        
+        // 다음 버튼 비활성화
+        nextButton.isEnabled = false
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -52,6 +63,7 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imageView.image = newImage
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
     
     
 }

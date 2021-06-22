@@ -106,12 +106,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BS4-s1-f3O">
                                         <rect key="frame" x="0.0" y="42" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-al-brX">
                                         <rect key="frame" x="0.0" y="84" width="234" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -160,6 +160,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
                                                 <state key="normal" title="다음"/>
                                                 <connections>
+                                                    <action selector="touchUpInsideNextButton:" destination="rjh-Bm-8xW" eventType="touchUpInside" id="FXp-sQ-aKT"/>
                                                     <segue destination="wK1-2v-6z2" kind="showDetail" id="Ees-dg-0Wl"/>
                                                 </connections>
                                             </button>
@@ -207,6 +208,7 @@
                         <outlet property="checkLabel" destination="ySJ-al-brX" id="qiP-yB-PL1"/>
                         <outlet property="idLabel" destination="QOD-bb-lzR" id="QuW-2l-lWA"/>
                         <outlet property="imageView" destination="AR3-5D-SF5" id="66b-PP-lmo"/>
+                        <outlet property="nextButton" destination="9pn-Wb-SCr" id="UrT-b1-1yY"/>
                         <outlet property="passwordLabel" destination="BS4-s1-f3O" id="RW6-ZY-ogV"/>
                     </connections>
                 </viewController>
