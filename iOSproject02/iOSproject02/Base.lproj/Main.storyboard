@@ -68,6 +68,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kOf-k3-uoq" secondAttribute="trailing" constant="50" id="wAh-yu-1aQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uAq-8f-MyJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +82,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giH-JH-DDm">
+                                <rect key="frame" x="20" y="20" width="120" height="120"/>
+                                <connections>
+                                    <action selector="touchUpInsidePickerButton:" destination="rjh-Bm-8xW" eventType="touchUpInside" id="pQA-lF-aRO"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-5D-SF5">
                                 <rect key="frame" x="20" y="20" width="120" height="120"/>
                                 <constraints>
@@ -179,11 +186,15 @@
                             <constraint firstItem="z7b-fV-ZTw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AFo-2w-gdQ" secondAttribute="trailing" symbolic="YES" id="6ob-FF-DIp"/>
                             <constraint firstItem="AFo-2w-gdQ" firstAttribute="leading" secondItem="z7b-fV-ZTw" secondAttribute="leading" constant="20" id="9W2-fa-Rfx"/>
                             <constraint firstItem="AR3-5D-SF5" firstAttribute="leading" secondItem="z7b-fV-ZTw" secondAttribute="leading" constant="20" id="AAf-Ek-3xQ"/>
+                            <constraint firstItem="giH-JH-DDm" firstAttribute="width" secondItem="AR3-5D-SF5" secondAttribute="width" id="D6X-u2-XbG"/>
                             <constraint firstItem="z7b-fV-ZTw" firstAttribute="trailing" secondItem="6M8-X9-h8W" secondAttribute="trailing" constant="10" id="F73-La-zzo"/>
                             <constraint firstItem="vZj-42-UjC" firstAttribute="leading" secondItem="AR3-5D-SF5" secondAttribute="trailing" constant="20" id="IZa-kr-sBK"/>
+                            <constraint firstItem="giH-JH-DDm" firstAttribute="centerY" secondItem="AR3-5D-SF5" secondAttribute="centerY" id="J68-2E-l6N"/>
                             <constraint firstItem="6M8-X9-h8W" firstAttribute="leading" secondItem="z7b-fV-ZTw" secondAttribute="leading" constant="10" id="Npj-HY-TjZ"/>
                             <constraint firstItem="hhP-gR-hyR" firstAttribute="top" secondItem="AFo-2w-gdQ" secondAttribute="bottom" constant="10" id="QeQ-7E-EyC"/>
                             <constraint firstItem="hhP-gR-hyR" firstAttribute="leading" secondItem="z7b-fV-ZTw" secondAttribute="leading" constant="20" id="Wxq-jz-50q"/>
+                            <constraint firstItem="giH-JH-DDm" firstAttribute="centerX" secondItem="AR3-5D-SF5" secondAttribute="centerX" id="X8x-sD-vDi"/>
+                            <constraint firstItem="giH-JH-DDm" firstAttribute="height" secondItem="AR3-5D-SF5" secondAttribute="height" id="d3G-Lf-83h"/>
                             <constraint firstItem="6M8-X9-h8W" firstAttribute="top" secondItem="hhP-gR-hyR" secondAttribute="bottom" constant="10" id="nin-mp-CQk"/>
                             <constraint firstItem="AFo-2w-gdQ" firstAttribute="top" secondItem="AR3-5D-SF5" secondAttribute="bottom" constant="20" id="onv-Ne-D2R"/>
                             <constraint firstItem="z7b-fV-ZTw" firstAttribute="trailing" secondItem="hhP-gR-hyR" secondAttribute="trailing" constant="20" id="sEN-iw-A8M"/>
@@ -193,7 +204,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DHO-2d-cbb"/>
                     <connections>
-                        <outlet property="chekLabel" destination="ySJ-al-brX" id="boM-4e-Cp6"/>
+                        <outlet property="checkLabel" destination="ySJ-al-brX" id="qiP-yB-PL1"/>
                         <outlet property="idLabel" destination="QOD-bb-lzR" id="QuW-2l-lWA"/>
                         <outlet property="imageView" destination="AR3-5D-SF5" id="66b-PP-lmo"/>
                         <outlet property="passwordLabel" destination="BS4-s1-f3O" id="RW6-ZY-ogV"/>
@@ -201,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngm-Fs-W3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="104"/>
+            <point key="canvasLocation" x="856.52173913043487" y="103.79464285714285"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="BKM-NG-XT7">
