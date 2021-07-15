@@ -67,7 +67,7 @@ extension secondViewController: UITextFieldDelegate {
         let password = passwordLabel.text
         let check = checkLabel.text
         
-        if password == check && id?.count != 0 && password?.count != 0 && check?.count != 0 {
+        if password == check && id != nil {
             nextButton.isEnabled = true
         }
         return true
