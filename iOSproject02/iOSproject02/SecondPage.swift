@@ -41,6 +41,8 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imagePicker.sourceType = .photoLibrary
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
+        self.checkLabel.delegate = self
+        self.passwordLabel.delegate = self
         
         // 다음 버튼 비활성화
         nextButton.isEnabled = false
