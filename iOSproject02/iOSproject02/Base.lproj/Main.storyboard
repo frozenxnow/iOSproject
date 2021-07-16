@@ -240,8 +240,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="8cS-Dh-BbX">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="8cS-Dh-BbX">
                                 <rect key="frame" x="0.0" y="175" width="414" height="216"/>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="wK1-2v-6z2" eventType="valueChanged" id="aK0-03-EHa"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="month date, year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqm-4M-iJg">
                                 <rect key="frame" x="184" y="133.5" width="150" height="20.5"/>
@@ -337,6 +340,9 @@
                             <constraint firstItem="8cS-Dh-BbX" firstAttribute="trailing" secondItem="8zX-WN-KhS" secondAttribute="trailing" id="yg0-eq-XrV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="xqm-4M-iJg" id="YyQ-gZ-1qa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ya-FX-R2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

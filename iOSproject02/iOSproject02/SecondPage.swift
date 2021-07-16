@@ -63,15 +63,23 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
 }
 
+
+
+
+// *** 여기 다시 보기 // ***
+
 extension secondViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let id = idLabel.text
         let password = passwordLabel.text
         let check = checkLabel.text
         
-        if password == check && id != nil {
+        if id != "" && password != "" && password == check {
             nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
         }
+            
         return true
     }
 }
