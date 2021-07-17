@@ -30,6 +30,7 @@ class thirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         formatter.dateFormat = "yyyy년 MM월 dd일"
         dateLabel.text = formatter.string(from: picker.date)
     }

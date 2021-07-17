@@ -9,10 +9,6 @@ import UIKit
 
 class secondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-//    @IBOutlet weak var cancelButtonWidth: NSLayoutConstraint!
-//    @IBOutlet weak var submitButtonWidth: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var idLabel: UITextField!
     @IBOutlet weak var passwordLabel: UITextField!
@@ -30,6 +26,10 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func touchUpInsideCancelButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
+        
     }
     
     
@@ -58,15 +58,7 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imageView.image = newImage
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
 }
-
-
-
-
-// *** 여기 다시 보기 // ***
 
 extension secondViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
@@ -82,5 +74,4 @@ extension secondViewController: UITextFieldDelegate {
     }
     
 }
-
-
+=
