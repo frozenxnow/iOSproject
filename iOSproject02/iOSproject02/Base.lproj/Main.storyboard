@@ -342,6 +342,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="xqm-4M-iJg" id="YyQ-gZ-1qa"/>
+                        <outlet property="picker" destination="8cS-Dh-BbX" id="Qid-qy-6Mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ya-FX-R2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
