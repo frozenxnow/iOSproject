@@ -28,6 +28,7 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
         
     }
@@ -74,4 +75,4 @@ extension secondViewController: UITextFieldDelegate {
     }
     
 }
-=
+
