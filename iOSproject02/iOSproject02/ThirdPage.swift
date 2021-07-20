@@ -15,7 +15,6 @@ class thirdViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-       
         formatter.dateFormat = "yyyy년 MM월 dd일"
         dateLabel.text = formatter.string(from: sender.date)
     }
@@ -27,6 +26,8 @@ class thirdViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    var id: String?
+    var password: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

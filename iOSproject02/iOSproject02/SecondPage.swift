@@ -28,11 +28,16 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "secondToThirdSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? thirdViewController {
+            vc.id = idLabel.text
+            vc.password = passwordLabel.text
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
