@@ -26,6 +26,11 @@ class thirdViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func touchUpInsideSubmitButton(_ sender: UIButton) {
+        UserInformation.shared.id = self.id
+        UserInformation.shared.password = self.password
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
     var id: String?
     var password: String?
     

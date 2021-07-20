@@ -305,6 +305,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh8-Pe-wyO">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="50"/>
                                                 <state key="normal" title="가입"/>
+                                                <connections>
+                                                    <action selector="touchUpInsideSubmitButton:" destination="wK1-2v-6z2" eventType="touchUpInside" id="Lfe-1m-RQO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
