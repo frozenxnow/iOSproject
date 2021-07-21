@@ -31,8 +31,11 @@ class thirdViewController: UIViewController {
         UserInformation.shared.password = self.password
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    // 전달받는 데이터 변수
     var id: String?
     var password: String?
+    var info: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

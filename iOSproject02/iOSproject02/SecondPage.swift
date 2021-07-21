@@ -20,6 +20,7 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var textView: UITextView!
     
     let imagePicker = UIImagePickerController()
+    
     func pickImage() {
         self.present(self.imagePicker, animated: true, completion: nil)
     }
@@ -29,16 +30,23 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func touchUpInsideNextButton(_ sender: UIButton) {
         performSegue(withIdentifier: "secondToThirdSegue", sender: self)
     }
     
+    
+    
+    // 바로 저장하지 않고 회원가입을 완료했을 때 데이터를 저장하도록 다음 페이지로 데이터 전달 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? thirdViewController {
             vc.id = idLabel.text
             vc.password = passwordLabel.text
+            vc.info = textView.text
         }
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,74 +76,18 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
 }
 
 extension secondViewController: UITextFieldDelegate {
-//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-//        guard let _ = idLabel.text else {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//
-//        guard let password = passwordLabel.text, let check = checkLabel.text else {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//
-//        if password != check {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//
-//        guard let _ = imageView.image else {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//
-//        guard let text = textView.text else {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//
-//        if text.count == 0 {
-//            nextButton.isEnabled = false
-//            return
-//        }
-//        nextButton.isEnabled = true
-//    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let _ = idLabel.text else {
-            nextButton.isEnabled = false
-            return
-        }
+    // image, id, password, check, 자기소개 모두 입력되었을 때 다음(nextButton) 버튼 활성화
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let id = idLabel.text else { return }
+        guard let password = passwordLabel.text, let check = checkLabel.text else { return }
+        guard let image = imageView.image else { return }
+        guard let info = textView.text else { return }
         
-        guard let password = passwordLabel.text, let check = checkLabel.text else {
+        if password == check {
+            nextButton.isEnabled = true
+        } else {
             nextButton.isEnabled = false
-            return
         }
-        
-        if password != check {
-            nextButton.isEnabled = false
-            return
-        }
-        
-        guard let _ = imageView.image else {
-            nextButton.isEnabled = false
-            return
-        }
-        
-        guard let text = textView.text else {
-            nextButton.isEnabled = false
-            return
-        }
-        
-        if text.count == 0 {
-            nextButton.isEnabled = false
-            return
-        }
-        nextButton.isEnabled = true
-    }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        return true
     }
 }
 
