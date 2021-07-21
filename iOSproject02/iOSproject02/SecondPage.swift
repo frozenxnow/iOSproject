@@ -17,6 +17,7 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
         pickImage()
     }
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var textView: UITextView!
     
     let imagePicker = UIImagePickerController()
     func pickImage() {
@@ -67,17 +68,74 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
 }
 
 extension secondViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        let id = idLabel.text
-        let password = passwordLabel.text
-        let check = checkLabel.text
-        
-        if id != nil && password != nil {
-            if password == check {
-                nextButton.isEnabled = true
-            }
-        }
-    }
+//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+//        guard let _ = idLabel.text else {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//
+//        guard let password = passwordLabel.text, let check = checkLabel.text else {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//
+//        if password != check {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//
+//        guard let _ = imageView.image else {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//
+//        guard let text = textView.text else {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//
+//        if text.count == 0 {
+//            nextButton.isEnabled = false
+//            return
+//        }
+//        nextButton.isEnabled = true
+//    }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let _ = idLabel.text else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        guard let password = passwordLabel.text, let check = checkLabel.text else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        if password != check {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        guard let _ = imageView.image else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        guard let text = textView.text else {
+            nextButton.isEnabled = false
+            return
+        }
+        
+        if text.count == 0 {
+            nextButton.isEnabled = false
+            return
+        }
+        nextButton.isEnabled = true
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        return true
+    }
 }
 
