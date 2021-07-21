@@ -77,11 +77,18 @@ class secondViewController: UIViewController, UIImagePickerControllerDelegate, U
 
 extension secondViewController: UITextFieldDelegate {
     // image, id, password, check, 자기소개 모두 입력되었을 때 다음(nextButton) 버튼 활성화
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        guard let id = idLabel.text else { return }
-        guard let password = passwordLabel.text, let check = checkLabel.text else { return }
-        guard let image = imageView.image else { return }
-        guard let info = textView.text else { return }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let _ = imageView.image else {
+            nextButton.isEnabled = false
+            return
+        }
+        guard let id = idLabel.text, let password = passwordLabel.text, let check = checkLabel.text, let info = textView.text else {
+            nextButton.isEnabled = false
+            return }
+        
+        if id.count == 0 || password.count == 0 || info.count == 0 {
+            nextButton.isEnabled = false
+        }
         
         if password == check {
             nextButton.isEnabled = true
@@ -89,5 +96,6 @@ extension secondViewController: UITextFieldDelegate {
             nextButton.isEnabled = false
         }
     }
+    
 }
 
