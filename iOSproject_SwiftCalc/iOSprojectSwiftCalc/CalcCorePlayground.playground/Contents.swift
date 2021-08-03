@@ -6,6 +6,19 @@ enum Operator {
     case minus
     case multiply
     case divide
+    
+    var doCalc: (Double, Double) -> Double {
+        switch self {
+            case .plus:
+                return (+)
+            case .minus:
+                return (-)
+            case .multiply:
+                return (*)
+            case .divide:
+                return (/)
+        }
+    }
 }
 
 struct OperationNode {
@@ -17,7 +30,7 @@ struct Operation {
     var base: Double
     var operationNode: [OperationNode]
     
-    // Operator별 계산 
+    // Operator별 계산
 }
 
 
