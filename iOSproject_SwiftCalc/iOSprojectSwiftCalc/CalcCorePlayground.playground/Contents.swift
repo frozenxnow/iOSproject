@@ -28,14 +28,19 @@ struct OperationNode {
 
 struct Operation {
     var base: Double
-    var operationNode: [OperationNode]
+    var operationNodes: [OperationNode]
     
-    // Operator별 계산
+    // Operator 계산하는 function
+    func mergeOperationNodes() {
+        let value = operationNodes.reduce(base, {
+            (result: Double, element: OperationNode) in
+            element.op.doCalc(result, element.operand)
+        })
+        print(value)
+    }
 }
 
-
-
-var clac = Operation(base: 3, operationNode: [OperationNode(op: .plus, operand: 5), OperationNode(op: .multiply, operand: 2)])
+var calc = Operation(base: 3, operationNodes: [OperationNode(op: .plus, operand: 5), OperationNode(op: .multiply, operand: 2)])
 // 3항 연산
 
-
+let result = calc.mergeOperationNodes()
