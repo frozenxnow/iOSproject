@@ -13,8 +13,35 @@
 		F2B6A4C626B81CD5006D11A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B6A4C426B81CD5006D11A0 /* Main.storyboard */; };
 		F2B6A4C826B81CDD006D11A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B6A4C726B81CDD006D11A0 /* Assets.xcassets */; };
 		F2B6A4CB26B81CDD006D11A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B6A4C926B81CDD006D11A0 /* LaunchScreen.storyboard */; };
-		F2B6A4D426B81EBA006D11A0 /* CalcCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4D326B81EBA006D11A0 /* CalcCore.swift */; };
+		F2BB5BF826BC2FAB00FCF334 /* CalcCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F2BB5BF626BC2FAB00FCF334 /* CalcCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2BB5BFB26BC2FAB00FCF334 /* CalcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BB5BF426BC2FAB00FCF334 /* CalcCore.framework */; };
+		F2BB5BFC26BC2FAB00FCF334 /* CalcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2BB5BF426BC2FAB00FCF334 /* CalcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2BB5C0226BC2FC400FCF334 /* CalcCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4D326B81EBA006D11A0 /* CalcCore.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2BB5BF926BC2FAB00FCF334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2B6A4B326B81CD5006D11A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2BB5BF326BC2FAB00FCF334;
+			remoteInfo = CalcCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2BB5C0026BC2FAB00FCF334 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2BB5BFC26BC2FAB00FCF334 /* CalcCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F2B6A4BB26B81CD5006D11A0 /* iOSprojectSwiftCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSprojectSwiftCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +53,21 @@
 		F2B6A4CA26B81CDD006D11A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2B6A4CC26B81CDD006D11A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B6A4D326B81EBA006D11A0 /* CalcCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCore.swift; sourceTree = "<group>"; };
+		F2BB5BF426BC2FAB00FCF334 /* CalcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2BB5BF626BC2FAB00FCF334 /* CalcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalcCore.h; sourceTree = "<group>"; };
+		F2BB5BF726BC2FAB00FCF334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F2B6A4B826B81CD5006D11A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2BB5BFB26BC2FAB00FCF334 /* CalcCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2BB5BF126BC2FAB00FCF334 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B6A4BD26B81CD5006D11A0 /* iOSprojectSwiftCalc */,
+				F2BB5BF526BC2FAB00FCF334 /* CalcCore */,
 				F2B6A4BC26B81CD5006D11A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B6A4BB26B81CD5006D11A0 /* iOSprojectSwiftCalc.app */,
+				F2BB5BF426BC2FAB00FCF334 /* CalcCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,12 +105,32 @@
 				F2B6A4C726B81CDD006D11A0 /* Assets.xcassets */,
 				F2B6A4C926B81CDD006D11A0 /* LaunchScreen.storyboard */,
 				F2B6A4CC26B81CDD006D11A0 /* Info.plist */,
-				F2B6A4D326B81EBA006D11A0 /* CalcCore.swift */,
 			);
 			path = iOSprojectSwiftCalc;
 			sourceTree = "<group>";
 		};
+		F2BB5BF526BC2FAB00FCF334 /* CalcCore */ = {
+			isa = PBXGroup;
+			children = (
+				F2B6A4D326B81EBA006D11A0 /* CalcCore.swift */,
+				F2BB5BF626BC2FAB00FCF334 /* CalcCore.h */,
+				F2BB5BF726BC2FAB00FCF334 /* Info.plist */,
+			);
+			path = CalcCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F2BB5BEF26BC2FAB00FCF334 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2BB5BF826BC2FAB00FCF334 /* CalcCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F2B6A4BA26B81CD5006D11A0 /* iOSprojectSwiftCalc */ = {
@@ -80,15 +140,35 @@
 				F2B6A4B726B81CD5006D11A0 /* Sources */,
 				F2B6A4B826B81CD5006D11A0 /* Frameworks */,
 				F2B6A4B926B81CD5006D11A0 /* Resources */,
+				F2BB5C0026BC2FAB00FCF334 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F2BB5BFA26BC2FAB00FCF334 /* PBXTargetDependency */,
 			);
 			name = iOSprojectSwiftCalc;
 			productName = iOSprojectSwiftCalc;
 			productReference = F2B6A4BB26B81CD5006D11A0 /* iOSprojectSwiftCalc.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F2BB5BF326BC2FAB00FCF334 /* CalcCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2BB5BFD26BC2FAB00FCF334 /* Build configuration list for PBXNativeTarget "CalcCore" */;
+			buildPhases = (
+				F2BB5BEF26BC2FAB00FCF334 /* Headers */,
+				F2BB5BF026BC2FAB00FCF334 /* Sources */,
+				F2BB5BF126BC2FAB00FCF334 /* Frameworks */,
+				F2BB5BF226BC2FAB00FCF334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalcCore;
+			productName = CalcCore;
+			productReference = F2BB5BF426BC2FAB00FCF334 /* CalcCore.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +180,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					F2B6A4BA26B81CD5006D11A0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					F2BB5BF326BC2FAB00FCF334 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -118,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				F2B6A4BA26B81CD5006D11A0 /* iOSprojectSwiftCalc */,
+				F2BB5BF326BC2FAB00FCF334 /* CalcCore */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +217,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2BB5BF226BC2FAB00FCF334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,13 +232,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B6A4C326B81CD5006D11A0 /* ViewController.swift in Sources */,
-				F2B6A4D426B81EBA006D11A0 /* CalcCore.swift in Sources */,
 				F2B6A4BF26B81CD5006D11A0 /* AppDelegate.swift in Sources */,
 				F2B6A4C126B81CD5006D11A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2BB5BF026BC2FAB00FCF334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2BB5C0226BC2FC400FCF334 /* CalcCore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2BB5BFA26BC2FAB00FCF334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2BB5BF326BC2FAB00FCF334 /* CalcCore */;
+			targetProxy = F2BB5BF926BC2FAB00FCF334 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F2B6A4C426B81CD5006D11A0 /* Main.storyboard */ = {
@@ -288,6 +394,7 @@
 		F2B6A4D026B81CDD006D11A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +414,7 @@
 		F2B6A4D126B81CDD006D11A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +428,60 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2BB5BFE26BC2FAB00FCF334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TMK4224JM6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalcCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnow.CalcCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2BB5BFF26BC2FAB00FCF334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TMK4224JM6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalcCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xnow.CalcCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -340,6 +502,15 @@
 			buildConfigurations = (
 				F2B6A4D026B81CDD006D11A0 /* Debug */,
 				F2B6A4D126B81CDD006D11A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2BB5BFD26BC2FAB00FCF334 /* Build configuration list for PBXNativeTarget "CalcCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2BB5BFE26BC2FAB00FCF334 /* Debug */,
+				F2BB5BFF26BC2FAB00FCF334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
