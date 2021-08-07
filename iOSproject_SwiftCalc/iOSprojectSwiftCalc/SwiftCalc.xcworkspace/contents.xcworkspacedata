@@ -5,6 +5,6 @@
       location = "group:iOSprojectSwiftCalc.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CalcCorePlayground.playground">
+      location = "group:ClacCore.playground">
    </FileRef>
 </Workspace>
