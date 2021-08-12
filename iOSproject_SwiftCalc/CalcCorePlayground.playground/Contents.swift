@@ -30,8 +30,16 @@ struct OperationNode {
 
 struct Operation {
     var base: Double
-    var operatorNodes: [OperationNode]
+    var operationNodes: [OperationNode]
+    
+    func mergeOperationNodes() {
+        let value = operationNodes.reduce(base, {
+            (result: Double, element:OperationNode) in
+            element.op.doCalc(result, element.operand)
+        })
+        print(value)
+    }
 }
 
 
-var calc = Operation(base: 3, operatorNodes: [OperationNode(op: .plus, operand: 5), OperationNode(op: .multiply, operand: 2)])
+var calc = Operation(base: 3, operationNodes: [OperationNode(op: .plus, operand: 5), OperationNode(op: .multiply, operand: 2)])
