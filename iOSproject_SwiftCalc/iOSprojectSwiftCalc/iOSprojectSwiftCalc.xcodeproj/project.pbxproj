@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2AB5B4E26C5583100051B38 /* CoreCalcFramework in Resources */ = {isa = PBXBuildFile; fileRef = F2AB5B4D26C5583100051B38 /* CoreCalcFramework */; };
-		F2AB5B5726C558A600051B38 /* CoreCalcFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AB5B5526C5589900051B38 /* CoreCalcFramework.framework */; };
-		F2AB5B5826C558A600051B38 /* CoreCalcFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2AB5B5526C5589900051B38 /* CoreCalcFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2AB5B5A26C5603100051B38 /* CalcCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AB5B5926C5603100051B38 /* CalcCore.swift */; };
 		F2B6A4BF26B81CD5006D11A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4BE26B81CD5006D11A0 /* AppDelegate.swift */; };
 		F2B6A4C126B81CD5006D11A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4C026B81CD5006D11A0 /* SceneDelegate.swift */; };
 		F2B6A4C326B81CD5006D11A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4C226B81CD5006D11A0 /* ViewController.swift */; };
@@ -18,16 +16,6 @@
 		F2B6A4CB26B81CDD006D11A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B6A4C926B81CDD006D11A0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F2AB5B5426C5589900051B38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2AB5B5026C5589900051B38 /* CoreCalcFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F2AB5B3726C557A200051B38;
-			remoteInfo = CoreCalcFramework;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		F2BB5C0026BC2FAB00FCF334 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2AB5B5826C558A600051B38 /* CoreCalcFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,8 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F2AB5B4D26C5583100051B38 /* CoreCalcFramework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreCalcFramework; sourceTree = "<group>"; };
-		F2AB5B5026C5589900051B38 /* CoreCalcFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreCalcFramework.xcodeproj; path = CoreCalcFramework/CoreCalcFramework.xcodeproj; sourceTree = "<group>"; };
+		F2AB5B5926C5603100051B38 /* CalcCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCore.swift; sourceTree = "<group>"; };
 		F2B6A4BB26B81CD5006D11A0 /* iOSprojectSwiftCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSprojectSwiftCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B6A4BE26B81CD5006D11A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B6A4C026B81CD5006D11A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,36 +46,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2AB5B5726C558A600051B38 /* CoreCalcFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F2AB5B4F26C5589900051B38 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F2AB5B5026C5589900051B38 /* CoreCalcFramework.xcodeproj */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F2AB5B5126C5589900051B38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F2AB5B5526C5589900051B38 /* CoreCalcFramework.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F2B6A4B226B81CD5006D11A0 = {
 			isa = PBXGroup;
 			children = (
 				F2B6A4BD26B81CD5006D11A0 /* iOSprojectSwiftCalc */,
-				F2AB5B4D26C5583100051B38 /* CoreCalcFramework */,
 				F2B6A4BC26B81CD5006D11A0 /* Products */,
-				F2AB5B4F26C5589900051B38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +78,7 @@
 				F2B6A4C726B81CDD006D11A0 /* Assets.xcassets */,
 				F2B6A4C926B81CDD006D11A0 /* LaunchScreen.storyboard */,
 				F2B6A4CC26B81CDD006D11A0 /* Info.plist */,
+				F2AB5B5926C5603100051B38 /* CalcCore.swift */,
 			);
 			path = iOSprojectSwiftCalc;
 			sourceTree = "<group>";
@@ -161,28 +129,12 @@
 			mainGroup = F2B6A4B226B81CD5006D11A0;
 			productRefGroup = F2B6A4BC26B81CD5006D11A0 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F2AB5B5126C5589900051B38 /* Products */;
-					ProjectRef = F2AB5B5026C5589900051B38 /* CoreCalcFramework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F2B6A4BA26B81CD5006D11A0 /* iOSprojectSwiftCalc */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F2AB5B5526C5589900051B38 /* CoreCalcFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CoreCalcFramework.framework;
-			remoteRef = F2AB5B5426C5589900051B38 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F2B6A4B926B81CD5006D11A0 /* Resources */ = {
@@ -192,7 +144,6 @@
 				F2B6A4CB26B81CDD006D11A0 /* LaunchScreen.storyboard in Resources */,
 				F2B6A4C826B81CDD006D11A0 /* Assets.xcassets in Resources */,
 				F2B6A4C626B81CD5006D11A0 /* Main.storyboard in Resources */,
-				F2AB5B4E26C5583100051B38 /* CoreCalcFramework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B6A4C326B81CD5006D11A0 /* ViewController.swift in Sources */,
+				F2AB5B5A26C5603100051B38 /* CalcCore.swift in Sources */,
 				F2B6A4BF26B81CD5006D11A0 /* AppDelegate.swift in Sources */,
 				F2B6A4C126B81CD5006D11A0 /* SceneDelegate.swift in Sources */,
 			);
