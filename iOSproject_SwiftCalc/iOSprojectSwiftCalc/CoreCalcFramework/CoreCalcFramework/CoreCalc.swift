@@ -1,11 +1,13 @@
 //
-//  CalcCore.swift
-//  iOSprojectSwiftCalc
+//  CoreCalc.swift
+//  CoreCalcFramework
 //
-//  Created by 지원 on 2021/08/02.
+//  Created by 지원 on 2021/08/12.
 //
 
 import Foundation
+import UIKit
+
 
 enum Operator {
     case plus
@@ -15,14 +17,14 @@ enum Operator {
     
     var doCalc: (Double, Double) -> Double {
         switch self {
-            case .plus:
-                return (+)
-            case .minus:
-                return (-)
-            case .multiply:
-                return (*)
-            case .divide:
-                return (/)
+        case .plus:
+            return (+)
+        case .minus:
+            return (-)
+        case .multiply:
+            return (*)
+        case .divide:
+            return (/)
         }
     }
 }
@@ -36,12 +38,14 @@ struct Operation {
     var base: Double
     var operationNodes: [OperationNode]
     
-    // Operator 계산하는 function
     func mergeOperationNodes() {
         let value = operationNodes.reduce(base, {
-            (result: Double, element: OperationNode) in
-            element.op.doCalc(result, element.operand)
+            (result: Double, elememt: OperationNode) in
+            elememt.op.doCalc(result, elememt.operand)
         })
         print(value)
     }
 }
+
+
+
