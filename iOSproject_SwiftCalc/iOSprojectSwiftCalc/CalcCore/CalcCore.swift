@@ -1,7 +1,11 @@
-import UIKit
-import Foundation
-import CalcCore
+//
+//  CalcCore.swift
+//  iOSprojectSwiftCalc
+//
+//  Created by 지원 on 2021/08/12.
+//
 
+import Foundation
 
 enum Operator {
     case plus
@@ -40,10 +44,4 @@ struct Operation {
         print(value)
     }
 }
-
-
-
-var calc = Operation(base: 3, operationNodes: [OperationNode(op: .plus, operand: 5), OperationNode(op: .multiply, operand: 2)])
-let result = calc.mergeOperationNodes()
-
 
