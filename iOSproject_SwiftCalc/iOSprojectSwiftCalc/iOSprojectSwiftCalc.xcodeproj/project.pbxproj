@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F25588F926C76A5E00168D47 /* CalcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25588F826C76A5E00168D47 /* CalcCore.framework */; };
+		F25588FA26C76A5E00168D47 /* CalcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F25588F826C76A5E00168D47 /* CalcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2B6A4BF26B81CD5006D11A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4BE26B81CD5006D11A0 /* AppDelegate.swift */; };
 		F2B6A4C126B81CD5006D11A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4C026B81CD5006D11A0 /* SceneDelegate.swift */; };
 		F2B6A4C326B81CD5006D11A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6A4C226B81CD5006D11A0 /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F25588FA26C76A5E00168D47 /* CalcCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F25588F826C76A5E00168D47 /* CalcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CalcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B6A4BB26B81CD5006D11A0 /* iOSprojectSwiftCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSprojectSwiftCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B6A4BE26B81CD5006D11A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B6A4C026B81CD5006D11A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25588F926C76A5E00168D47 /* CalcCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F25588F726C76A5E00168D47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F25588F826C76A5E00168D47 /* CalcCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2B6A4B226B81CD5006D11A0 = {
 			isa = PBXGroup;
 			children = (
 				F2B6A4BD26B81CD5006D11A0 /* iOSprojectSwiftCalc */,
 				F2B6A4BC26B81CD5006D11A0 /* Products */,
+				F25588F726C76A5E00168D47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

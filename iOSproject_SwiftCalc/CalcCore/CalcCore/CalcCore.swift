@@ -15,14 +15,14 @@ enum Operator {
     
     var doCalc: (Double, Double) -> Double {
         switch self {
-            case .plus:
-                return (+)
-            case .minus:
-                return (-)
-            case .multiply:
-                return (*)
-            case .divide:
-                return (/)
+        case .plus:
+            return (+)
+        case .minus:
+            return (-)
+        case .multiply:
+            return (*)
+        case .divide:
+            return (/)
         }
     }
 }
@@ -36,10 +36,9 @@ struct Operation {
     var base: Double
     var operationNodes: [OperationNode]
     
-    // Operator 계산하는 function
     func mergeOperationNodes() {
         let value = operationNodes.reduce(base, {
-            (result: Double, element: OperationNode) in
+            (result: Double, element:OperationNode) in
             element.op.doCalc(result, element.operand)
         })
         print(value)

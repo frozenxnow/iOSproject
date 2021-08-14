@@ -2,7 +2,7 @@
 //  CalcCore.h
 //  CalcCore
 //
-//  Created by 지원 on 2021/08/05.
+//  Created by 지원 on 2021/08/14.
 //
 
 #import <Foundation/Foundation.h>
